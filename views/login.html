@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Unicat</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Unicat project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="main_styles.css">
+<link rel="stylesheet" type="text/css" href="responsive.css">
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container">
+								<a href="/">
+									<div class="logo_text">Music <span>Ocean</span></div>
+								</a>
+							</div>
+							<nav class="main_nav_contaner ml-auto">
+								<ul class="main_nav">
+									<li><a href="/">Home</a></li>
+									<li><a href="/about">About</a></li>
+									<li><a href="/contact">Contact</a></li>
+								</ul>
+								<div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
+
+								<!-- Hamburger -->
+
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+<div class="counter">
+		<div class="counter_background" style="background-image:url(images/counter_background.jpg)"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="counter_content">
+						<h2 class="counter_title">Music Ocean에 로그인하세요!</h2>
+						<div class="counter_text"><p>자신만의 음악을 찾을 수 있는 곳! 1주일마다 차트 갱신해드립니다. 자신이 좋아하는 음악에 하트와 댓글을 남겨주세요!</p></div>
+
+						<!-- Milestones -->
+
+						<div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
+							
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+<script type="text/javascript">
+			function fnCheckPassword()
+
+{
+    if(!/^[a-zA-Z0-9]{8,20}$/.test(document.userInfo.upw.value))
+
+    { 
+        alert('비밀번호는 숫자와 영문자 조합으로 8~12자리를 사용해야 합니다.'); 
+        return false;
+    }
+
+  
+    var chk_num = document.userInfo.upw.value.search(/[0-9]/g); 
+    var chk_eng = document.userInfo.upw.value.search(/[a-z]/ig);
+
+    if(chk_num < 0 || chk_eng < 0)
+
+    { 
+        alert('비밀번호는 숫자와 영문자를 혼용하여야 합니다.'); 
+        return false;
+    }
+    
+    if(/(\w)\1\1\1/.test(document.userInfo.upw.value))
+
+    {
+        alert('비밀번호에 같은 문자를 4번 이상 사용하실 수 없습니다.'); 
+        return false;
+    }
+
+    if(document.userInfo.upw.value.search(document.userInfo.uid.value)>-1)
+
+    {
+        alert('ID가 포함된 비밀번호는 사용하실 수 없습니다.'); 
+        return false;
+    }
+
+
+    return true;
+
+}
+</script>
+
+
+<div class="counter_form">
+				<div class="row fill_height">
+					<div class="col fill_height">
+						<form class="counter_form_content d-flex flex-column align-items-center justify-content-center" action="#" onsubmit="return fnCheckPassword()">
+							<div class="counter_form_title">Login</div>
+							<input type="text" class="counter_input" placeholder="이름" required="required">
+							<input type="id" id="uid" name="uid" class="counter_input" placeholder="ID" required="required">
+							<input type="password" id="upw" name="upw" class="counter_input" placeholder="비밀번호" required="required">
+							<button type="submit" class="counter_form_button">login now</button>
+							<button class = "counter_form_button1" onclick="window.location.href='/register'"> register</button>
+						</form>
+					</div>
+		   		</div>
+</div>
+
+</html>
